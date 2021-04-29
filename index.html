@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Curso AngularJS</title>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/angular-route/angular-route.min.js"></script>
+
+    <script src="curso-app.js"></script>
+    <script src="curso-router.js"></script>
+
+    <script src="cadastro/cadastro-controller.js"></script>
+    <script src="home/home-controller.js"></script>
+
     <link rel="shortcut icon" href="assets/favicon.ico">
-    <script>
-        angular.module("app", []);
-        angular.module("app").controller("appController", function(){
-            vm = this;
-            vm.teste = "Teste";
-            vm.ola = "Bem vindo ao curso de AngularJS";
-            console.log(this.ola);
-        })
-    </script>
+
 </head>
 
 
-<body ng-app="app">
-    <div ng-controller="appController as vm">
-        <h1>{{ vm.ola }}</h1>
-        <label for="teste">Email</label>
-        <input type="text" class="form-control" ng-model="vm.teste" id="teste">
-        <button type="button" class="btn btn-primary">Teste</button>
-        <h2>{{ vm.teste }}</h2>
-    </div>
+<body>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cadastro</a>
+        </li>
+      </ul>
+
+    <div ng-view></div>
 </body>
 </html>
