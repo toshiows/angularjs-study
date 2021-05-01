@@ -23,15 +23,40 @@
 
 
 <body>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cadastro</a>
-        </li>
-      </ul>
 
+    <script>
+        angular.module('app').controller('MenuController', MenuController);
+        MenuController.$inject = ['$location'];
+
+        function MenuController($location) {
+            vm = this;
+
+            vm.itensMenu = [
+                {titulo: 'Home', class: 'nav-link active'},
+                {titulo: 'Cadastro', class: 'nav-link'}
+            ]
+
+            vm.navegar = function(rota, array) {
+                angular.forEach(array, function(item){
+                    if(item.titulo == rota) {
+                        item.class = 'nav-link active';
+                    }
+                    else {
+                        item.class = 'nav-link';
+                    }
+                });
+                $location.path(rota);
+            }
+        }
+    </script>
+
+    <div ng-controller="MenuController as vm">
+        <ul class="nav nav-tabs">
+            <li class="nav-item" ng-repeat="item in vm.itensMenu">
+                <a ng-class="item.class" ng-click="vm.navegar(item.titulo, vm.itensMenu)">{{ item.titulo }}</a>
+            </li>
+        </ul>
+    </div>
     <div ng-view></div>
 </body>
 </html>
