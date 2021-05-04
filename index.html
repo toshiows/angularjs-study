@@ -50,7 +50,7 @@
             }
         }
     </script>
-
+<div class="container-fluid">
     <div ng-controller="MenuController as vm">
         <ul class="nav nav-tabs">
             <li class="nav-item" ng-repeat="item in vm.itensMenu">
@@ -58,6 +58,7 @@
             </li>
         </ul>
     </div>
-    <div ng-view></div>
+</div>
+    <div class="container" ng-view></div>
 </body>
 </html>

@@ -1,2 +1,17 @@
-<h1>{{ vm.titulo }}</h1>
-<button type="button" class="btn btn-primary" ng-click="vm.listarClientes()">Navegar</button>
+<div class="container" ng-init="vm.listarClientes()">
+    <h1>{{ vm.titulo }}</h1>
+</div>
+<div class="container">
+    <table class="table">
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Telefone</th>
+        <tbody>
+            <tr ng-repeat="cliente in vm.clientes">
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.idade }}</td>
+                <td>{{ cliente.telefone }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
