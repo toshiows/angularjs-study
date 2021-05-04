@@ -1,2 +1,19 @@
-<h1>{{ vm.titulo }}</h1>
-<button type="button" class="btn btn-primary" ng-click="vm.voltar()">Voltar</button>
+<div class="container">
+    <form>
+        <h1>{{ vm.titulo }}</h1>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Nome</label>
+            <input type="text" class="form-control" id="nome" ng-model="vm.cliente.nome" placeholder="Nome">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Idade</label>
+            <input type="text" class="form-control" id="idade" ng-model="vm.cliente.idade" placeholder="Idade">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Telefone</label>
+            <input type="number" class="form-control" id="telefone" ng-model="vm.cliente.telefone" placeholder="Telefone">
+        </div>
+        <button type="button" class="btn btn-primary" ng-click="vm.cadastrar()">Cadastrar</button>
+        <button type="button" class="btn btn-secondary" ng-click="vm.voltar()">Limpar</button>
+    </form>
+</div>
