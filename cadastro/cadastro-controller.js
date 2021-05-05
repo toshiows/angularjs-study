@@ -18,4 +18,8 @@ CadastroController.$inject = ['$location', 'CursoService'];
             })
         }
 
+        vm.limpar = function() {
+            vm.cliente = {}
+        }
+
     }

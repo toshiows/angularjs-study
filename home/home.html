@@ -3,14 +3,19 @@
 </div>
 <div class="container">
     <table class="table">
-        <th>Nome</th>
-        <th>Idade</th>
-        <th>Telefone</th>
+        <thead>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Telefone</th>
+            <th scope="col" colspan="2">Opções</th>
+        </thead>
         <tbody>
             <tr ng-repeat="cliente in vm.clientes">
                 <td>{{ cliente.nome }}</td>
                 <td>{{ cliente.idade }}</td>
                 <td>{{ cliente.telefone }}</td>
+                <td><button type="button" class="btn btn-outline-warning" ng-click="">Editar</button>
+                <td><button type="button" class="btn btn-outline-danger" ng-click="">Excluir</button></td>
             </tr>
         </tbody>
     </table>
