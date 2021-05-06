@@ -15,7 +15,7 @@
                 <td>{{ cliente.idade }}</td>
                 <td>{{ cliente.telefone }}</td>
                 <td><button type="button" class="btn btn-outline-warning" ng-click="">Editar</button>
-                <td><button type="button" class="btn btn-outline-danger" ng-click="">Excluir</button></td>
+                <td><button type="button" class="btn btn-outline-danger" ng-click="vm.deletarCliente(cliente.id)">Excluir</button></td>
             </tr>
         </tbody>
     </table>

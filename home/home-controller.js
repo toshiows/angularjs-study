@@ -2,7 +2,7 @@ angular.module('app').controller('HomeController', HomeController);
 HomeController.$inject = ['$location', 'CursoService'];
 
     function HomeController($location, CursoService) {
-        vm = this;
+        let vm = this;
         vm.titulo = 'Home';
         vm.clientes = [];
 
@@ -16,6 +16,12 @@ HomeController.$inject = ['$location', 'CursoService'];
                    vm.clientes = response;
                    //console.log(response);
                 }
+            })
+        }
+
+        vm.deletarCliente = function(id) {
+            CursoService.exec_DELETE(id).then(function(response){
+                
             })
         }
     }

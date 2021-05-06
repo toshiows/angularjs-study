@@ -2,7 +2,7 @@ angular.module('app').controller('CadastroController', CadastroController);
 CadastroController.$inject = ['$location', 'CursoService'];
 
     function CadastroController($location, CursoService) {
-        vm = this;
+        let vm = this;
         vm.titulo = 'Cadastro';
         vm.cliente = {};
 
