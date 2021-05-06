@@ -13,7 +13,7 @@
             <label for="formGroupExampleInput2">Telefone</label>
             <input type="number" class="form-control" id="telefone" ng-model="vm.cliente.telefone" placeholder="Telefone" required />
         </div>
-        <button type="button" class="btn btn-primary" ng-click="vm.cadastrar()">Cadastrar</button>
+        <button type="button" class="btn btn-primary" ng-click="vm.cadastrar()">{{ vm.opcaoBotao }}</button>
         <button type="button" class="btn btn-secondary" ng-click="vm.limpar()">Limpar</button>
     </form>
 </div>

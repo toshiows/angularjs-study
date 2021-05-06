@@ -6,8 +6,8 @@ HomeController.$inject = ['$location', 'CursoService'];
         vm.titulo = 'Home';
         vm.clientes = [];
 
-        vm.navegar = function() {
-            $location.path('cadastro')
+        vm.navegar = function(rota, id) {
+            $location.path(rota + '/' + id)
         }
 
         vm.listarClientes = function() {
@@ -21,7 +21,14 @@ HomeController.$inject = ['$location', 'CursoService'];
 
         vm.deletarCliente = function(id) {
             CursoService.exec_DELETE(id).then(function(response){
-                
+
             })
+        }
+
+        vm.editar = function(id) {
+            vm.navegar('Cadastro', id);
+            /* CursoService.exec_PUT(id).then(function(){
+                
+            }) */
         }
     }

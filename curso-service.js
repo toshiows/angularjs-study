@@ -14,6 +14,12 @@ CursoService.$inject = ["$http"]
             },
             exec_DELETE: function(id) {
                 return $http.delete(restAPI+'/' + id).then(tratarResposta, tratarErro);
+            },
+            exec_GET_ID: function(id) {
+                return $http.get(restAPI+'/' + id).then(tratarResposta, tratarErro);
+            },
+            exec_PUT: function(cliente) {
+                return $http.put(restAPI+'/'+cliente.id,  cliente).then(tratarResposta, tratarErro);
             }
         }
 

@@ -1,6 +1,6 @@
 angular.module('app').config(function($routeProvider){
     $routeProvider
-        .when('/Cadastro', {
+        .when('/Cadastro/:id?', {
             templateUrl: 'cadastro/cadastro.html',
             controller: 'CadastroController as vm'
         })
