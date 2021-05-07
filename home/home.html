@@ -2,7 +2,10 @@
     <h1>{{ vm.titulo }}</h1>
 </div>
 <div class="container">
-    <table class="table">
+    <div class="alert alert-danger" role="alert" ng-if="vm.erro">
+        A conexão com o BD falhou.
+      </div>
+    <table class="table" ng-if="vm.clientes">
         <thead>
             <th scope="col">Nome</th>
             <th scope="col">Idade</th>
@@ -10,7 +13,7 @@
             <th scope="col" colspan="2">Opções</th>
         </thead>
         <tbody>
-            <tr ng-repeat="cliente in vm.clientes">
+            <tr ng-repeat="cliente in vm.clientes | orderBy : 'id'" >
                 <td>{{ cliente.nome }}</td>
                 <td>{{ cliente.idade }}</td>
                 <td>{{ cliente.telefone }}</td>

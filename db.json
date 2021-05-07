@@ -1,46 +1,10 @@
 {
   "clientes": [
     {
-      "id": 1,
       "nome": "Toshio",
-      "idade": "30",
-      "telefone": "152152152"
-    },
-    {
-      "id": 2,
-      "nome": "Thiago",
-      "idade": "31",
-      "telefone": "2323123213"
-    },
-    {
-      "id": 3,
-      "nome": "Rafael",
-      "idade": "32",
-      "telefone": "5231312322"
-    },
-    {
-      "id": 4,
-      "nome": "Marcos",
-      "idade": "33",
-      "telefone": "323241412"
-    },
-    {
-      "id": 5,
-      "nome": "Paulo",
-      "idade": "34",
-      "telefone": "4231232311"
-    },
-    {
-      "nome": "Toshiows",
-      "idade": "26",
-      "telefone": 15874,
-      "id": 6
-    },
-    {
-      "nome": "Joaoas",
       "idade": "12",
-      "telefone": 1500511,
-      "id": 7
+      "telefone": 322,
+      "id": 1
     }
   ]
 }

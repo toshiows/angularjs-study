@@ -5,6 +5,7 @@ HomeController.$inject = ['$location', 'CursoService'];
         let vm = this;
         vm.titulo = 'Home';
         vm.clientes = [];
+        vm.erro = false;
 
         vm.navegar = function(rota, id) {
             $location.path(rota + '/' + id)
@@ -15,6 +16,9 @@ HomeController.$inject = ['$location', 'CursoService'];
                 if(response) {
                    vm.clientes = response;
                    //console.log(response);
+                }
+                else {
+                    vm.erro = true;
                 }
             })
         }
