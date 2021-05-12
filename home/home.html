@@ -2,9 +2,10 @@
     <h1>{{ vm.titulo }}</h1>
 </div>
 <div class="container">
-    <div class="alert alert-danger" role="alert" ng-if="vm.erro">
-        A conexão com o BD falhou.
-      </div>
+        <div class="container" ng-if="vm.erro">
+            <alert-to-user mensagem="'A conexão com o BD falhou.'" tipo="'erro'"></alert-to-user>
+        </div>
+        
     <table class="table" ng-if="vm.clientes">
         <thead>
             <th scope="col">Nome</th>
